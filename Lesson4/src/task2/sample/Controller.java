@@ -35,6 +35,28 @@ public class Controller {
         String s = ((Node)event.getSource()).getId();
         eraseNullMessage();
         if (!mainField.getText().isEmpty() && !resultField.getText().isEmpty()) {
+            switch (s) {
+                case "buttonAdd": {
+                    operation.setText(buttonAdd.getText());
+                    break;
+                }
+                case "buttonSub": {
+                    operation.setText(buttonSub.getText());
+                    break;
+                }
+                case "buttonMult": {
+                    operation.setText(buttonMult.getText());
+                    break;
+                }
+                case "buttonDiv": {
+                    operation.setText(buttonDiv.getText());
+                    break;
+                }
+                case "buttonExp": {
+                    operation.setText(buttonExp.getText());
+                    break;
+                }
+            }
             result();
         } else {
             resultField.appendText((mainField.getText()));
@@ -113,7 +135,7 @@ public class Controller {
     }
 
     public void clear() {
-        resultField.clear();
+        resultField.setText("0");
         mainField.clear();
         operation.setText("");
         mainField.requestFocus();
