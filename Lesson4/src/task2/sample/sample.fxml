@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="vBox" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="task2.sample.Controller">
+
+    <stylesheets>
+        <URL value="@/css/style.css" />
+    </stylesheets>
+
+    <TextField fx:id="resultField" alignment="TOP_LEFT" editable="false" focusTraversable="false" onAction="#eraseNullMessage" text="0" VBox.vgrow="ALWAYS">
+      <VBox.margin>
+         <Insets left="3.0" right="3.0" />
+      </VBox.margin></TextField>
+    <Label fx:id="operation">
+      <font>
+         <Font size="15.0" />
+      </font></Label>
+    <TextField fx:id="mainField" alignment="TOP_LEFT">
+      <VBox.margin>
+         <Insets left="3.0" right="3.0" />
+      </VBox.margin></TextField>
+
+    <HBox spacing="5" VBox.vgrow="ALWAYS">
+        <Button fx:id="buttonAdd" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#operands" prefHeight="25.0" prefWidth="26.0" text="+" HBox.hgrow="ALWAYS" />
+        <Button fx:id="buttonSub" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#operands" prefHeight="25.0" prefWidth="25.0" text="-" HBox.hgrow="ALWAYS" />
+      <padding>
+         <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+
+    <HBox spacing="5" VBox.vgrow="ALWAYS">
+        <Button fx:id="buttonMult" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#operands" text="*" HBox.hgrow="ALWAYS" />
+        <Button fx:id="buttonDiv" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#operands" text="/" HBox.hgrow="ALWAYS" />
+      <padding>
+         <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+
+    <HBox spacing="5" VBox.vgrow="ALWAYS">
+        <Button fx:id="buttonExp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#operands" text="^" HBox.hgrow="ALWAYS" />
+        <Button fx:id="changeSign" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#change" text="-/+" HBox.hgrow="ALWAYS" />
+        <Button fx:id="clear" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#clear" prefHeight="25.0" prefWidth="35.0" text="C" HBox.hgrow="ALWAYS" />
+        <Button fx:id="buttonResult" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#result" text="=" HBox.hgrow="ALWAYS" />
+      <padding>
+         <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+</VBox>

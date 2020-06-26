@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="center" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="task1.sample.Controller">
+    <TextArea fx:id="chatField" editable="false" VBox.vgrow="ALWAYS" focusTraversable="false"/>
+    <HBox spacing="5">
+        <TextField fx:id="messageField" minWidth="-Infinity" HBox.hgrow="ALWAYS" onKeyPressed="#enterPressed" promptText="Введите сообщение"/>
+        <Button onAction="#sendMessageAction" text="Отправить"/>
+      <padding>
+         <Insets bottom="2.0" left="2.0" right="2.0" top="5.0" />
+      </padding>
+    </HBox>
+   <padding>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+   </padding>
+</VBox>

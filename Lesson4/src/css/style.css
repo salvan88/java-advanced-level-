@@ -1,0 +1,9 @@
+#clear {
+    -fx-background-color: DarkRed
+}
+#vBox {
+    -fx-background-color: Silver
+}
+#operation {
+    -fx-background-color: Silver
+}
