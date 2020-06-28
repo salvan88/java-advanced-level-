@@ -15,7 +15,7 @@ public class Array extends Thread {
             arr[i] = (float) (arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
         }
 
-        System.out.println(System.currentTimeMillis() - a);
+        System.out.println("Время работы метода 1: " + (System.currentTimeMillis() - a));
     }
 
     public void array2() throws InterruptedException {
@@ -54,6 +54,6 @@ public class Array extends Thread {
         System.arraycopy(arr1, 0, arr, 0, HALF);
         System.arraycopy(arr2, 0, arr, HALF, HALF);
 
-        System.out.println(System.currentTimeMillis() - a);
+        System.out.println("Время работы метода 2: " + (System.currentTimeMillis() - a));
     }
 }
